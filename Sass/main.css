@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+}
+
+.container {
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  left: calc(50vw - 500px);
+  top: calc(50vh - 250px);
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.person {
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: end;
+  transition: transform 200ms linear;
+}
+.person img {
+  width: 100px;
+  height: 100px;
+}
+
+.obstacle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: end;
+  animation: movingObstacle 3s linear infinite;
+}
+.obstacle img {
+  width: 60px;
+}
+
+@keyframes movingObstacle {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 1000px;
+  }
+}
+.gameover {
+  background-color: rgba(0, 0, 0, 0.241);
+  z-index: 2;
+}
+.gameover h1 {
+  text-align: center;
+  display: block;
+  font-size: 4rem;
+}
+.gameover button {
+  display: block;
+  margin: auto;
+  background-color: red;
+  color: white;
+  padding: 2rem;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 5rem;
+  border-radius: 50%;
+}
+.gameover button:hover {
+  background-color: rgb(255, 77, 77);
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
