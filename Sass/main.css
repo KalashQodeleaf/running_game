@@ -78,6 +78,7 @@ body {
   text-align: center;
   font-size: 5rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 .gameover button:hover {
   background-color: rgb(255, 77, 77);

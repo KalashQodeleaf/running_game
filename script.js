@@ -13,6 +13,7 @@ const checkGameOver =() => {
         const animation = obstacle.getAnimations()[0];
         animation.pause()
         clearInterval(checkGameInterval);
+        clearInterval(speedUp)
         
     }
   
@@ -37,7 +38,8 @@ document.addEventListener('keydown',(e)=>{
 //     obstacle.style.animationDuration =  animationDuration +"ms";
 // })
 
-setInterval(()=>{
+const speedUp = setInterval(()=>{
+    console.log("speed up");
     animationDuration -=1;
     obstacle.style.animationDuration= animationDuration+"ms";
 }
@@ -46,3 +48,4 @@ const restart =()=>{
     window.location.reload();
 }
 const checkGameInterval = setInterval(checkGameOver, 200);
+()=>speedUp;
