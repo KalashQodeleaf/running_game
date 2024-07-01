@@ -5,8 +5,6 @@
 
 body{
     width: 100vw;
-
-
 }
 
 .container{
@@ -15,8 +13,9 @@ body{
     height: 500px;
     left: calc(50vw - 500px); 
     top: calc(50vh - 250px); 
-
- 
+    
+    background-position:center;
+    background-size: cover;
     border: 2px solid black;
     overflow: hidden;
     // background-color: red;
@@ -35,13 +34,14 @@ body{
 
         width: 100px;
         height: 100px;
+        filter: invert(1);
     }
     transition: transform 200ms linear;
 }
 .obstacle{
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -100px;
     
     background-repeat: no-repeat;
     background-position: center;
@@ -51,8 +51,9 @@ body{
     align-items: end;
     img{
         width: 60px;
+        
     }
-    animation: movingObstacle 3s linear infinite ;
+    // animation: movingObstacle 3s linear infinite ;
 }
 @keyframes movingObstacle {
     0%{
@@ -63,12 +64,13 @@ body{
     }
 }
 .gameover{
-    background-color: rgba(0, 0, 0, 0.241);
+    background-color: rgb(0, 0, 0);
     z-index: 2;
     h1{
         text-align: center;
         display: block;
         font-size: 4rem;
+        color: white;
     }
     button{
         display: block;
@@ -91,4 +93,16 @@ body{
 .hidden{
     display: none;
 }
-
+.rock{
+    right: translateX(100px);
+}
+.dog{
+    transform: translateX(100px);
+    bottom: -25px;
+    
+    img{
+        height: 100px;
+        width: fit-content;
+        filter: invert(1);
+    }
+}

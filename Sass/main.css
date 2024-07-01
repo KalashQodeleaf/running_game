@@ -13,6 +13,8 @@ body {
   height: 500px;
   left: calc(50vw - 500px);
   top: calc(50vh - 250px);
+  background-position: center;
+  background-size: cover;
   border: 2px solid black;
   overflow: hidden;
 }
@@ -32,12 +34,13 @@ body {
 .person img {
   width: 100px;
   height: 100px;
+  filter: invert(1);
 }
 
 .obstacle {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -100px;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -45,7 +48,6 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   align-items: end;
-  animation: movingObstacle 3s linear infinite;
 }
 .obstacle img {
   width: 60px;
@@ -60,13 +62,14 @@ body {
   }
 }
 .gameover {
-  background-color: rgba(0, 0, 0, 0.241);
+  background-color: rgb(0, 0, 0);
   z-index: 2;
 }
 .gameover h1 {
   text-align: center;
   display: block;
   font-size: 4rem;
+  color: white;
 }
 .gameover button {
   display: block;
@@ -86,4 +89,19 @@ body {
 
 .hidden {
   display: none;
+}
+
+.rock {
+  right: translateX(100px);
+}
+
+.dog {
+  transform: translateX(100px);
+  bottom: -25px;
+}
+.dog img {
+  height: 100px;
+  width: -moz-fit-content;
+  width: fit-content;
+  filter: invert(1);
 }/*# sourceMappingURL=main.css.map */
