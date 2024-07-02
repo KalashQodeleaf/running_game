@@ -103,5 +103,3 @@ const objectCome = setInterval(() => {
     }
 }, animationDuration);
 const checkGameInterval = setInterval(checkGameOver, 50);
-() => gameInterval;
-() => objectCome;
